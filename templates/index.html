@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Portfolio
+{% endblock %}
+
+{% block main %}
+<table>
+    <thead class="index">
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+
+
+    </thead>
+
+    <tfoot class="index">
+        <tr>
+            <td colspan="2"></td>
+            <th>
+                TOTAL
+            </th>
+            <td>
+                {{gtotal | usd}}
+            </td>
+
+        </tr>
+
+    </tfoot>
+
+    <tbody>
+        {% for dic in holdings %}
+
+        <tr>
+            <td>{{dic.symbol}}</td>
+
+            <td>{{dic.quantity}}</td>
+            <td>{{current_price[dic["symbol"]] | usd}}</td>
+            <td>{{total[dic["symbol"]] | usd}}</td>
+        </tr>
+
+        {% endfor %}
+
+        <tr>
+
+            <td colspan="2"></td>
+            <th>
+                Cash
+            </th>
+            <td>
+                {{cash | usd}}
+            </td>
+        </tr>
+    </tbody>
+    {% endblock %}
