@@ -3,7 +3,7 @@
 ## Introduction
 
 Welcome to CS50 Finance, a web app where users can "buy" and "sell" stocks, simulating real-world stock trading. This project is part of CS50's Introduction to Computer Science OpenCourseWare.
-
+![Finance](https://cs50.harvard.edu/x/2022/psets/9/finance/finance.png)
 ## Features
 
 - **User Registration:** Users can register for an account by providing a unique username and a secure password.
